@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arsenic Administration | Game Studio</title>
+  <meta name="description" content="Arsenic Administration - We make games. Side effects may include fun.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="assets/logo.svg" alt="Arsenic Administration" class="nav-logo-img">
+        <span class="logo-text">Arsenic<span class="logo-accent">Admin</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#games">Games</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="#about">About</a>
+    <a href="#games">Games</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge">EST. 2025 &mdash; LICENSED TO DEVELOP</div>
+      <h1 class="hero-title">
+        Arsenic<br>
+        <span class="title-accent">Administration</span>
+      </h1>
+      <p class="hero-subtitle">We make games. Side effects may include fun, existential dread, and an unreasonable attachment to fictional batteries.</p>
+      <div class="hero-actions">
+        <a href="#games" class="btn btn-primary">View Our Games</a>
+        <a href="#about" class="btn btn-ghost">Read the Fine Print</a>
+      </div>
+      <div class="hero-warning">
+        <span class="warning-icon">&#9888;</span>
+        <span>WARNING: This studio has been found to produce content that is dangerously entertaining. Proceed at your own risk.</span>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll to survive</span>
+      <div class="scroll-arrow">&#8595;</div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-label">// ABOUT_US</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>We're <span class="text-accent">legally</span> a game studio.</h2>
+          <p>Arsenic Administration is an indie game studio specializing in experiences that make you question your life choices &mdash; in a good way. We build games about systems, survival, and the quiet horror of the mundane.</p>
+          <p>Our philosophy is simple: take something ordinary, crank the pressure up to 11, and see what happens. The result is usually funny, occasionally unsettling, and always memorable.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-number">1</div>
+              <div class="stat-label">Game Shipped</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">5.0</div>
+              <div class="stat-label">Star Rating</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">0</div>
+              <div class="stat-label">Lawsuits (so far)</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">&infin;</div>
+              <div class="stat-label">Ambition</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-terminal">
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">arsenic_admin.sh</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="t-prompt">$</span> <span class="t-cmd">cat mission.txt</span></p>
+              <p class="t-output">Make games that slap.</p>
+              <p class="t-output">Don't get sued.</p>
+              <p class="t-output">Repeat.</p>
+              <p>&nbsp;</p>
+              <p><span class="t-prompt">$</span> <span class="t-cmd">echo $STATUS</span></p>
+              <p class="t-output">Alive (barely)</p>
+              <p>&nbsp;</p>
+              <p><span class="t-prompt">$</span> <span class="t-cmd">ls games/</span></p>
+              <p class="t-output">employee_of_the_month/</p>
+              <p class="t-output">???/</p>
+              <p>&nbsp;</p>
+              <p><span class="t-prompt">$</span> <span class="t-cursor">_</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Games -->
+  <section id="games" class="section games">
+    <div class="container">
+      <div class="section-label">// CATALOG</div>
+      <h2 class="section-title">Our Games</h2>
+      <p class="section-subtitle">Each one made with love, caffeine, and a concerning lack of sleep.</p>
+
+      <div class="game-card featured">
+        <div class="game-card-badge">LATEST RELEASE</div>
+        <div class="game-card-content">
+          <div class="game-info">
+            <h3 class="game-title">Employee of the Month!<br><span class="game-title-sub">(Please Remain Powered)</span></h3>
+            <div class="game-tags">
+              <span class="tag">Survival</span>
+              <span class="tag">First-Person</span>
+              <span class="tag">Horror</span>
+              <span class="tag">Factory Sim</span>
+            </div>
+            <p class="game-desc">You are a battery. Your job is to complete 10 tasks in a soul-crushing factory. Your energy never replenishes. Management does not care. Welcome to the workforce.</p>
+            <ul class="game-features">
+              <li>Retro liminal-space aesthetic</li>
+              <li>Intentionally frustrating resource management</li>
+              <li>A metaphor for capitalism that's too on-the-nose</li>
+              <li>You are literally a battery</li>
+            </ul>
+            <div class="game-meta">
+              <span>&#127918; Windows</span>
+              <span>&#11088; 5.0 / 5</span>
+              <span>&#128176; Free</span>
+              <span>&#9889; Prototype</span>
+            </div>
+            <a href="https://dough-burns-oven.itch.io/employee-of-the-month-please-remain-powered" target="_blank" rel="noopener" class="btn btn-primary">Play on itch.io <span class="btn-arrow">&rarr;</span></a>
+          </div>
+          <div class="game-visual">
+            <div class="game-placeholder">
+              <div class="placeholder-icon">&#9889;</div>
+              <div class="placeholder-text">EMPLOYEE<br>OF THE<br>MONTH</div>
+              <div class="placeholder-sub">[ please remain powered ]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="upcoming-banner">
+        <div class="upcoming-icon">&#128679;</div>
+        <div>
+          <strong>More games coming soon.</strong>
+          <p>We're cooking something. The kitchen might be on fire. Stay tuned.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="section team">
+    <div class="container">
+      <div class="section-label">// PERSONNEL_FILE</div>
+      <h2 class="section-title">The Team</h2>
+      <p class="section-subtitle">The people responsible for all of this. Complaints can be directed to /dev/null.</p>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">
+            <span>&#9760;</span>
+          </div>
+          <h3>Dough Burns Oven</h3>
+          <div class="team-role">Lead Everything</div>
+          <p class="team-bio">Wears every hat in the studio, including the ones that don't fit. Responsible for code, art, design, and blaming bugs on cosmic radiation.</p>
+        </div>
+        <!-- Add more team members here as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-label">// TRANSMISSION</div>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Business inquiries, fan mail, and threats should be sent to the appropriate channel.</p>
+
+      <div class="contact-grid">
+        <a href="https://dough-burns-oven.itch.io" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">&#127918;</div>
+          <div class="contact-name">itch.io</div>
+          <div class="contact-handle">dough-burns-oven</div>
+        </a>
+        <!-- Add more links as needed: Twitter/X, Discord, email, etc. -->
+      </div>
+
+      <div class="contact-disclaimer">
+        <p>Arsenic Administration is not responsible for any side effects experienced while playing our games, including but not limited to: joy, frustration, sudden awareness of the futility of factory work, or emotional bonds formed with inanimate batteries.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <img src="assets/logo.svg" alt="" class="footer-logo-img">
+        <span>Arsenic Administration</span>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 Arsenic Administration. All rights reserved. No antidote available.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

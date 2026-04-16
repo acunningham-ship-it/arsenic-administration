@@ -49,12 +49,46 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ---- Nav background on scroll ----
+// ---- Nav background on scroll + active link ----
 const nav = document.querySelector('.nav');
+const navLinks = document.querySelectorAll('.nav-links a');
+const sections = document.querySelectorAll('.section');
+
 window.addEventListener('scroll', () => {
+  // Nav border glow
   if (window.scrollY > 50) {
     nav.style.borderBottomColor = 'rgba(255, 45, 45, 0.1)';
   } else {
     nav.style.borderBottomColor = '';
   }
+
+  // Active nav link
+  let current = '';
+  sections.forEach(section => {
+    const top = section.offsetTop - 120;
+    if (window.scrollY >= top) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// ---- Scroll to top ----
+const scrollBtn = document.querySelector('.scroll-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 600) {
+    scrollBtn.classList.add('visible');
+  } else {
+    scrollBtn.classList.remove('visible');
+  }
+});
+
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });

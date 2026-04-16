@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" rx="100" fill="#1a1a1a"/>
+  <rect x="10" y="10" width="180" height="180" rx="90" fill="none" stroke="#ff2d2d" stroke-width="2" opacity="0.4"/>
+  <!-- Circuit/AI brain icon -->
+  <g transform="translate(100,95)" stroke="#ff2d2d" stroke-width="3" fill="none">
+    <!-- Brain outline -->
+    <ellipse cx="0" cy="0" rx="35" ry="40" stroke="#e8e8e8" stroke-width="2.5"/>
+    <!-- Center node -->
+    <circle cx="0" cy="0" r="6" fill="#ff2d2d"/>
+    <!-- Neural connections -->
+    <line x1="0" y1="0" x2="-20" y2="-20"/>
+    <line x1="0" y1="0" x2="20" y2="-20"/>
+    <line x1="0" y1="0" x2="-22" y2="15"/>
+    <line x1="0" y1="0" x2="22" y2="15"/>
+    <line x1="0" y1="0" x2="0" y2="-30"/>
+    <line x1="0" y1="0" x2="0" y2="28"/>
+    <!-- Nodes -->
+    <circle cx="-20" cy="-20" r="4" fill="#ff2d2d"/>
+    <circle cx="20" cy="-20" r="4" fill="#ff2d2d"/>
+    <circle cx="-22" cy="15" r="4" fill="#ff2d2d"/>
+    <circle cx="22" cy="15" r="4" fill="#ff2d2d"/>
+    <circle cx="0" cy="-30" r="4" fill="#ff2d2d"/>
+    <circle cx="0" cy="28" r="4" fill="#ff2d2d"/>
+  </g>
+  <!-- Label -->
+  <text x="100" y="160" text-anchor="middle" font-family="monospace" font-size="14" fill="#555">AI / NAV</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" rx="100" fill="#1a1a1a"/>
+  <rect x="10" y="10" width="180" height="180" rx="90" fill="none" stroke="#ff2d2d" stroke-width="2" opacity="0.4"/>
+  <!-- Code brackets icon -->
+  <g transform="translate(100,90)" stroke="#e8e8e8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Left bracket -->
+    <polyline points="-15,-30 -35,0 -15,30"/>
+    <!-- Right bracket -->
+    <polyline points="15,-30 35,0 15,30"/>
+    <!-- Slash -->
+    <line x1="10" y1="-25" x2="-10" y2="25" stroke="#ff2d2d" stroke-width="3"/>
+  </g>
+  <!-- Label -->
+  <text x="100" y="155" text-anchor="middle" font-family="monospace" font-size="14" fill="#555">CODE</text>
+</svg>

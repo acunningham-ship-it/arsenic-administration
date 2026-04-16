@@ -693,9 +693,7 @@ img { max-width: 100%; display: block; }
 }
 
 .footer-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+  display: block;
 }
 
 .footer-top {
@@ -704,6 +702,8 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin-bottom: 28px;
+  width: 100%;
 }
 
 .footer-logo {
@@ -720,6 +720,9 @@ img { max-width: 100%; display: block; }
 }
 
 .disclaimer {
+  display: block;
+  width: 100%;
+  clear: both;
   font-size: 0.72rem;
   font-style: italic;
   color: var(--text-muted);

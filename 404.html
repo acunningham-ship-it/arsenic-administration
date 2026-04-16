@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | Arsenic Administration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --accent: #ff2d2d;
+      --text: #e8e8e8;
+      --muted: #555;
+      --font-main: 'Space Grotesk', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font-main);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    .grid-bg {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 45, 45, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 45, 45, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    }
+
+    .content { position: relative; z-index: 1; max-width: 600px; }
+
+    .skull {
+      font-size: 5rem;
+      margin-bottom: 16px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.05); }
+    }
+
+    .error-code {
+      font-family: var(--font-mono);
+      font-size: clamp(5rem, 15vw, 10rem);
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      text-shadow: 0 0 60px rgba(255, 45, 45, 0.3);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .message {
+      color: #999;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .warning {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: #ff6b35;
+      background: rgba(255, 107, 53, 0.08);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-radius: 8px;
+      padding: 12px 20px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .terminal {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 12px;
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      overflow: hidden;
+      margin-bottom: 40px;
+      max-width: 460px;
+      width: 100%;
+    }
+    .terminal-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      background: #1a1a1a;
+      border-bottom: 1px solid #222;
+    }
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot.r { background: #ff5f57; }
+    .dot.y { background: #febc2e; }
+    .dot.g { background: #28c840; }
+    .terminal-body { padding: 16px; line-height: 1.8; }
+    .prompt { color: var(--accent); }
+    .cmd { color: var(--text); }
+    .out { color: #999; padding-left: 16px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      font-family: var(--font-main);
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      background: var(--accent);
+      color: var(--bg);
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      background: #cc2424;
+      color: var(--bg);
+      box-shadow: 0 0 30px rgba(255, 45, 45, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 24px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="content">
+    <div class="skull">☠️</div>
+    <div class="error-code">404</div>
+    <h1>You've been poisoned.</h1>
+    <p class="message">The page you're looking for has been dissolved, decommissioned, or never existed in the first place. Much like your energy in Employee of the Month.</p>
+
+    <div class="warning">
+      <span>&#9888;</span>
+      <span>INCIDENT REPORT: Subject wandered into restricted sector. Page not found. Administer antidote (home button) immediately.</span>
+    </div>
+
+    <div class="terminal">
+      <div class="terminal-header">
+        <span class="dot r"></span>
+        <span class="dot y"></span>
+        <span class="dot g"></span>
+      </div>
+      <div class="terminal-body">
+        <p><span class="prompt">$</span> <span class="cmd">locate page</span></p>
+        <p class="out">Error: page not found in any dimension</p>
+        <p>&nbsp;</p>
+        <p><span class="prompt">$</span> <span class="cmd">blame --verbose</span></p>
+        <p class="out">It's probably your fault.</p>
+        <p class="out">But we'll never tell.</p>
+        <p>&nbsp;</p>
+        <p><span class="prompt">$</span> <span class="cmd">suggest fix</span></p>
+        <p class="out">Go home. Touch grass. Try again.</p>
+      </div>
+    </div>
+
+    <a href="/" class="btn">Administer Antidote &#8594;</a>
+  </div>
+
+  <div class="footer">&copy; 2025 Arsenic Administration. This page is intentionally toxic.</div>
+</body>
+</html>

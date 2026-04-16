@@ -688,20 +688,21 @@ img { max-width: 100%; display: block; }
 /* ---- Footer ---- */
 .footer {
   border-top: 1px solid var(--border);
-  padding: 40px 0 32px;
+  padding: 48px 0 40px;
+  margin-top: 40px;
 }
 
 .footer-inner {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
 }
 
 .footer-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -715,17 +716,19 @@ img { max-width: 100%; display: block; }
 .footer-copy {
   font-size: 0.8rem;
   color: var(--text-muted);
+  margin: 0;
 }
 
 .disclaimer {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-style: italic;
   color: var(--text-muted);
-  opacity: 0.6;
-  line-height: 1.6;
-  padding-top: 20px;
+  opacity: 0.55;
+  line-height: 1.7;
+  padding-top: 24px;
+  margin: 0;
   border-top: 1px solid var(--border);
-  max-width: 700px;
+  max-width: 720px;
 }
 
 /* ---- Active nav link ---- */

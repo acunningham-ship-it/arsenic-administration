@@ -42,7 +42,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 120px;
 }
 
 body {
@@ -69,16 +69,60 @@ img { max-width: 100%; display: block; }
   padding: 0 24px;
 }
 
+/* ---- Announcement Banner ---- */
+.announcement-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--warning) 100%);
+  color: #0a0a0a;
+  padding: 10px 24px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.announcement-banner strong {
+  font-weight: 700;
+}
+
+.announcement-icon {
+  font-size: 1.1rem;
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .announcement-banner {
+    font-size: 0.82rem;
+    padding: 8px 16px;
+    gap: 8px;
+  }
+}
+
 /* ---- Nav ---- */
 .nav {
   position: fixed;
-  top: 0;
+  top: 42px;
   left: 0;
   right: 0;
   z-index: 1000;
   background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+  .nav {
+    top: 36px;
+  }
 }
 
 .nav-inner {
@@ -147,7 +191,7 @@ img { max-width: 100%; display: block; }
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 64px;
+  top: 108px;
   left: 0;
   right: 0;
   background: rgba(10, 10, 10, 0.95);

@@ -51,6 +51,18 @@ export async function onRequest(context) {
 
   const respHeaders = new Headers(upstream.headers);
   for (const [k, v] of Object.entries(CORS)) respHeaders.set(k, v);
+
+  if (subpath === "models" && upstream.ok) {
+    const data = await upstream.json();
+    if (Array.isArray(data?.data)) {
+      data.data = data.data.filter((m) =>
+        Array.isArray(m.supported_parameters) && m.supported_parameters.includes("tools")
+      );
+    }
+    respHeaders.set("Content-Type", "application/json");
+    return new Response(JSON.stringify(data), { status: upstream.status, headers: respHeaders });
+  }
+
   return new Response(upstream.body, { status: upstream.status, headers: respHeaders });
 }
 

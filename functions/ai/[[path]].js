@@ -29,7 +29,8 @@ export async function onRequest(context) {
     return json({ error: "server missing OPENROUTER_API_KEY" }, 500);
   }
 
-  const subpath = Array.isArray(params.path) ? params.path.join("/") : (params.path || "");
+  let subpath = Array.isArray(params.path) ? params.path.join("/") : (params.path || "");
+  subpath = subpath.replace(/^v1\//, "");
   const url = new URL(request.url);
   const target = `${UPSTREAM}/${subpath}${url.search}`;
 

@@ -19,7 +19,9 @@ export async function onRequest(context) {
     return new Response(null, { status: 204, headers: CORS });
   }
 
-  if (request.headers.get("X-Proxy-Key") !== env.PROXY_SHARED_SECRET) {
+  const bearer = (request.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "");
+  const proxyKey = request.headers.get("X-Proxy-Key") || bearer;
+  if (proxyKey !== env.PROXY_SHARED_SECRET) {
     return json({ error: "unauthorized" }, 401);
   }
 

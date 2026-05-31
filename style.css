@@ -497,6 +497,11 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 40px var(--accent-glow);
 }
 
+.game-card.coming-soon {
+  border-color: var(--border-light);
+  opacity: 0.9;
+}
+
 .game-card-badge {
   position: absolute;
   top: 20px;

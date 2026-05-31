@@ -491,6 +491,7 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius-lg);
   overflow: hidden;
   position: relative;
+  margin-bottom: 48px;
 }
 .game-card.featured {
   border-color: var(--accent);

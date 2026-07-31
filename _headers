@@ -1,8 +1,12 @@
 # Cloudflare Pages security headers. Applies to every route including /ai/*.
 #
-# CSP notes: the site loads no third-party JS. style-src needs 'unsafe-inline' because
-# 404.html carries an inline <style> block and Google Fonts injects a stylesheet; script-src
-# does NOT, so an injected <script> is blocked outright — that is the half that matters.
+# CSP notes: style-src needs 'unsafe-inline' because 404.html carries an inline <style> block
+# and Google Fonts injects a stylesheet; script-src does NOT, so an injected <script> is
+# blocked outright — that is the half that matters.
+#
+# static.cloudflareinsights.com is the Web Analytics beacon Cloudflare INJECTS into the
+# response. It appears in no source file, so no grep of this repo will ever reveal it; the
+# first CSP here blocked it and killed analytics while the page still rendered perfectly.
 /*
   Strict-Transport-Security: max-age=15552000
   X-Content-Type-Options: nosniff
@@ -10,4 +14,4 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()
   Cross-Origin-Opener-Policy: same-origin
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests

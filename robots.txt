@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# /ai is an authenticated OpenRouter proxy, not content. Nothing to index, and every
+# crawler hit is a wasted request against an endpoint that only answers 401.
+Disallow: /ai
+Disallow: /ai/
+
+Sitemap: https://arsenicadministration.org/sitemap.xml

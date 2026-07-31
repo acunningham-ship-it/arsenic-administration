@@ -1,0 +1,13 @@
+# Cloudflare Pages security headers. Applies to every route including /ai/*.
+#
+# CSP notes: the site loads no third-party JS. style-src needs 'unsafe-inline' because
+# 404.html carries an inline <style> block and Google Fonts injects a stylesheet; script-src
+# does NOT, so an injected <script> is blocked outright — that is the half that matters.
+/*
+  Strict-Transport-Security: max-age=15552000
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests

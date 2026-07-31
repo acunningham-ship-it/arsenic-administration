@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arsenic Administration | Game Studio</title>
-  <meta name="description" content="Arsenic Administration - We make games. Side effects may include fun.">
+  <title>Arsenic Administration | Indie Game Studio</title>
+  <meta name="description" content="Arsenic Administration is an indie game studio making short, strange horror games about systems and labor. Makers of Employee of the Month! (Please Remain Powered).">
+  <link rel="canonical" href="https://arsenicadministration.org/">
   <!-- Open Graph -->
-  <meta property="og:title" content="Arsenic Administration | Game Studio">
+  <meta property="og:title" content="Arsenic Administration | Indie Game Studio">
   <meta property="og:description" content="Indie game studio specializing in experiences that make you question your life choices. Makers of Employee of the Month! (Please Remain Powered).">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://arsenicadministration.org">
+  <meta property="og:site_name" content="Arsenic Administration">
+  <meta property="og:url" content="https://arsenicadministration.org/">
   <meta property="og:image" content="https://arsenicadministration.org/assets/eotm-cover.png">
+  <meta property="og:image:alt" content="Employee of the Month! (Please Remain Powered) cover art">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Arsenic Administration | Game Studio">
@@ -22,6 +25,69 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/favicon-brand.png" type="image/png">
+  <!-- Structured data. No aggregateRating: the "5.0/5" on the page is self-declared with no
+       real review corpus, and fake review markup is a manual-action risk, not a ranking win. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://arsenicadministration.org/#studio",
+        "name": "Arsenic Administration",
+        "alternateName": "Arsenic Administration Game Studio",
+        "url": "https://arsenicadministration.org/",
+        "logo": "https://arsenicadministration.org/assets/logo-brand-256.png",
+        "foundingDate": "2025",
+        "description": "A small independent game studio making games about systems, labor, and the slow horror of ordinary things.",
+        "sameAs": ["https://dough-burns-oven.itch.io"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://arsenicadministration.org/#website",
+        "url": "https://arsenicadministration.org/",
+        "name": "Arsenic Administration",
+        "publisher": { "@id": "https://arsenicadministration.org/#studio" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "VideoGame",
+        "@id": "https://arsenicadministration.org/#eotm",
+        "name": "Employee of the Month! (Please Remain Powered)",
+        "url": "https://dough-burns-oven.itch.io/employee-of-the-month-please-remain-powered",
+        "image": "https://arsenicadministration.org/assets/eotm-cover.png",
+        "description": "A first-person survival game where you play as a battery working in a factory. Ten tasks. A fixed charge. No way to refuel. The game ends when you run out of power, whether you finish or not.",
+        "genre": ["Survival Horror", "First-Person", "Simulation"],
+        "gamePlatform": "PC",
+        "operatingSystem": "Windows",
+        "applicationCategory": "Game",
+        "playMode": "SinglePlayer",
+        "publisher": { "@id": "https://arsenicadministration.org/#studio" },
+        "author": { "@id": "https://arsenicadministration.org/#studio" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://dough-burns-oven.itch.io/employee-of-the-month-please-remain-powered"
+        }
+      },
+      {
+        "@type": "VideoGame",
+        "@id": "https://arsenicadministration.org/#plane-dread",
+        "name": "Plane Dread",
+        "image": "https://arsenicadministration.org/assets/plane-dread-cover.png",
+        "description": "26 things want you dead. 5 boards each flight. A roguelike horror experience where you face random enemy mechanics across procedurally escalating encounters.",
+        "genre": ["Roguelike", "Tactical", "Horror"],
+        "gamePlatform": "PC",
+        "operatingSystem": "Windows",
+        "applicationCategory": "Game",
+        "publisher": { "@id": "https://arsenicadministration.org/#studio" },
+        "author": { "@id": "https://arsenicadministration.org/#studio" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Top-of-page announcement -->
